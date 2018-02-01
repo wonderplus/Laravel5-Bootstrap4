@@ -115,6 +115,8 @@ npm install -g cross-env
 npm run dev  
 ```
 
+
+
 ----------
 
 php artisan serve  
