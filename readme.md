@@ -87,18 +87,19 @@ app.scssファイルの編集 [./resources/assets/sass/app.scss]
 _variables.scssファイルの編集 [./resources/assets/sass/_variables.scss]  
 ```
 // Typography
-$font-size-base: 14px;
-
-//$font-size-base: 14px;
+$font-size-base: .875rem; // 14px
 ```
 
 
 bootstrap.jsファイルの編集 [./resources/assets/js/bootstrap.js]  
 ```
+window._ = require('lodash');
+
+window.Popper = require('popper.js/dist/umd/popper');
+
 try {
-  window.$ = window.jQuery = require('jquery');
-  //window.Popper = require('popper.js').default;
-  require('bootstrap');
+    window.$ = window.jQuery = require('jquery/dist/jquery.slim');
+    require('bootstrap');
 } catch (e) {}
 ```
 
@@ -118,6 +119,9 @@ npm run dev
 
 
 ----------
+
+php artisan config:cache  
+composer dump-autoload  
 
 php artisan serve  
 http://localhost:8000/  
